@@ -56,7 +56,7 @@ export default function Home() {
     <>
       <main className="min-h-screen bg-gray-50 pb-8 pt-6">
         <HeroSection />
-        <div className="my-8">
+        <div className="my-8 sticky top-4 z-10">
           <RentalForm />
         </div>
         <section className="container mx-auto px-4">
