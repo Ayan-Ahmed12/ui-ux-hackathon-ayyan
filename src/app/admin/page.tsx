@@ -3,7 +3,7 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 import Image from "next/image"
-import { PieChart, Pie, Cell, ResponsiveContainer } from 'recharts'
+
 
 const carTypes = [
   { name: 'Sport Car', value: 17439, color: '#0D3559' },
@@ -154,23 +154,7 @@ export default function AdminDashboard() {
           </CardHeader>
           <CardContent>
             <div className="relative h-[240px]">
-              <ResponsiveContainer width="100%" height="100%">
-                <PieChart>
-                  <Pie
-                    data={carTypes}
-                    cx="50%"
-                    cy="50%"
-                    innerRadius={60}
-                    outerRadius={80}
-                    paddingAngle={5}
-                    dataKey="value"
-                  >
-                    {carTypes.map((entry, index) => (
-                      <Cell key={`cell-${index}`} fill={entry.color} />
-                    ))}
-                  </Pie>
-                </PieChart>
-              </ResponsiveContainer>
+
               <div className="absolute inset-0 flex items-center justify-center">
                 <div className="text-center">
                   <div className="text-2xl font-bold">72,030</div>
