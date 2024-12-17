@@ -1,4 +1,4 @@
-import { Navbar } from "@/app/components/navbar"
+import images from "next/image"
 import { HeroSection } from "@/app/components/hero-section"
 import { RentalForm } from "@/app/components/rental-form"
 import { CarCard } from "@/app/components/car-card"
@@ -8,45 +8,177 @@ const featuredCars = [
   {
     name: "Koenigsegg",
     type: "Sport",
-    image: "/placeholder.svg",
+    image: "/images/car1.png",
     price: 99,
     specs: {
-      manual: true,
+      fuel: 90,
+      manual: "manual",
       people: 2,
-      kml: 8.5
     }
   },
   {
     name: "Nissan GT-R",
     type: "Sport",
-    image: "/placeholder.svg",
+    image: "/images/car2.png",
     price: 80,
     specs: {
-      manual: true,
+      fuel: 80,
+      manual: "manual",
       people: 2,
-      kml: 9
+    }
+  },
+  { 
+    name: "Rolls-Royce",
+    type: "Sedan",
+    image: "/images/car3.png",
+    price: 96,
+    specs: {
+      fuel: 70,
+      manual: "manual",
+      people: 4,
     }
   },
   {
-    name: "Rolls-Royce",
-    type: "Sedan",
-    image: "/placeholder.svg",
-    price: 96,
-    specs: {
-      manual: false,
-      people: 4,
-      kml: 7
+    name: "All New Rush",
+    type: "Sport",
+    image: "/images/car2.png",
+    price: 80,
+    specs: {      
+      fuel: 80,
+      manual: "manual",
+      people: 2,
     }
   },
   {
     name: "All New Rush",
     type: "SUV",
-    image: "/placeholder.svg",
+    image: "/images/car5.png",
+    price: 99,
+    specs: {      
+      fuel: 72,
+      manual: "manual",
+      people: 6,
+    }
+  },
+  {
+    name: "CR - V",
+    type: "SUV",
+    image: "/images/car8.png",
+    price: 80,
+    specs: {
+      fuel: 80,
+      manual: "manual",
+      people: 6,
+    }
+  },
+  {
+    name: "All New Terios",
+    type: "SUV",
+    image: "/images/car5.png",
+    price: 74,
+    specs: {
+      fuel: 90,
+      manual: "manual",
+      people: 6,
+    }
+  },
+  {
+    name: "CR - V",
+    type: "SUV",
+    image: "/images/car8.png",
     price: 72,
     specs: {
-      manual: true,
+      fuel: 80,
+      manual: "manual",      
       people: 6,
-      kml: 10
+    }
+  },
+  {
+    name: "Koenigsegg",
+    type: "Sport",
+    image: "/images/car1.png",
+    price: 99,
+    specs: {
+      fuel: 90,
+      manual: "manual",
+      people: 2,
+    }
+  },
+  {
+    name: "Nissan GT-R",
+    type: "Sport",
+    image: "/images/car2.png",
+    price: 80,
+    specs: {
+      fuel: 80,
+      manual: "manual",
+      people: 2,
+    }
+  },
+  { 
+    name: "Rolls-Royce",
+    type: "Sedan",
+    image: "/images/car3.png",
+    price: 96,
+    specs: {
+      fuel: 70,
+      manual: "manual",
+      people: 4,
+    }
+  },
+  {
+    name: "All New Rush",
+    type: "Sport",
+    image: "/images/car2.png",
+    price: 80,
+    specs: {      
+      fuel: 80,
+      manual: "manual",
+      people: 2,
+    }
+  },
+  {
+    name: "All New Rush",
+    type: "SUV",
+    image: "/images/car5.png",
+    price: 99,
+    specs: {      
+      fuel: 72,
+      manual: "manual",
+      people: 6,
+    }
+  },
+  {
+    name: "CR - V",
+    type: "SUV",
+    image: "/images/car8.png",
+    price: 80,
+    specs: {
+      fuel: 80,
+      manual: "manual",
+      people: 6,
+    }
+  },
+  {
+    name: "All New Terios",
+    type: "SUV",
+    image: "/images/car5.png",
+    price: 74,
+    specs: {
+      fuel: 90,
+      manual: "manual",
+      people: 6,
+    }
+  },
+  {
+    name: "CR - V",
+    type: "SUV",
+    image: "/images/car8.png",
+    price: 72,
+    specs: {
+      fuel: 80,
+      manual: "manual",      
+      people: 6,
     }
   },
 ]
@@ -56,7 +188,7 @@ export default function Home() {
     <>
       <main className="min-h-screen bg-gray-50 pb-8 pt-6">
         <HeroSection />
-        <div className="my-8 sticky top-4 z-10">
+        <div className="my-8  top-4 z-10">
           <RentalForm />
         </div>
         <section className="container mx-auto px-4">
