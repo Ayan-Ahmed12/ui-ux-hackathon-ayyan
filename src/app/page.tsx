@@ -1,4 +1,4 @@
-import images from "next/image"
+// import images from "next/image"
 import { HeroSection } from "@/app/components/hero-section"
 import { RentalForm } from "@/app/components/rental-form"
 import { CarCard } from "@/app/components/car-card"
