@@ -3,7 +3,7 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 import Image from "next/image"
-
+import { PieChart, Pie, Cell, ResponsiveContainer } from 'recharts'
 
 const carTypes = [
   { name: 'Sport Car', value: 17439, color: '#0D3559' },
@@ -56,7 +56,7 @@ export default function AdminDashboard() {
             <div className="flex items-center gap-4">
               <div className="h-16 w-24 overflow-hidden rounded-lg bg-[#3563E9] p-2">
                 <Image
-                  src="/images/Ads2.png"
+                  src="/placeholder.svg"
                   alt="Nissan GT-R"
                   width={80}
                   height={48}
@@ -64,13 +64,13 @@ export default function AdminDashboard() {
                 />
               </div>
               <div>
-                <h3 className="font-semibold text-2xl">Nissan GT-R</h3>
+                <h3 className="font-semibold">Nissan GT-R</h3>
                 <p className="text-sm text-gray-500">Sport Car</p>
               </div>
               <div className="ml-auto text-sm text-gray-500">#9761</div>
             </div>
 
-            {/* <div className="grid gap-6 sm:grid-cols-2">
+            <div className="grid gap-6 sm:grid-cols-2">
               <div>
                 <div className="flex items-center gap-2">
                   <div className="h-2 w-2 rounded-full bg-[#3563E9]" />
@@ -136,7 +136,7 @@ export default function AdminDashboard() {
                   </Select>
                 </div>
               </div>
-            </div> */}
+            </div>
 
             <div>
               <h4 className="text-sm font-medium">Total Rental Price</h4>
@@ -154,7 +154,23 @@ export default function AdminDashboard() {
           </CardHeader>
           <CardContent>
             <div className="relative h-[240px]">
-
+              <ResponsiveContainer width="100%" height="100%">
+                <PieChart>
+                  <Pie
+                    data={carTypes}
+                    cx="50%"
+                    cy="50%"
+                    innerRadius={60}
+                    outerRadius={80}
+                    paddingAngle={5}
+                    dataKey="value"
+                  >
+                    {carTypes.map((entry, index) => (
+                      <Cell key={`cell-${index}`} fill={entry.color} />
+                    ))}
+                  </Pie>
+                </PieChart>
+              </ResponsiveContainer>
               <div className="absolute inset-0 flex items-center justify-center">
                 <div className="text-center">
                   <div className="text-2xl font-bold">72,030</div>

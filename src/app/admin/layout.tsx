@@ -1,5 +1,5 @@
 import Link from "next/link"
-import { Button } from "@/components/ui/button"
+// import { Button } from "@/components/ui/button"
 import { LayoutDashboard, Car, BarChart2, RefreshCcw, Inbox, Calendar, Settings, HelpCircle, Moon, LogOut } from 'lucide-react'
 
 interface SidebarItem {
@@ -114,7 +114,7 @@ export default function AdminLayout({
           </nav>
 
           <Link
-            href="/logout"
+            href="/"
             className="group flex items-center gap-3 rounded-lg px-3 py-2 text-sm font-medium text-gray-500 transition-colors hover:bg-gray-100"
           >
             <LogOut className="h-5 w-5" />
